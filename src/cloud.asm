@@ -1,20 +1,21 @@
-// Shader really never used comment out: #pragma bind_symbol ( FOG_COLOR , c9 )
 // Fixes Clouds in MC3DS
 #pragma bind_symbol ( WORLDVIEWPROJ , c0 , c3 )
 #pragma bind_symbol ( WORLD , c4 , c7 )
 #pragma bind_symbol ( RENDER_DISTANCE , c8 )
+#pragma bind_symbol ( FOG_COLOR , c9 )
 #pragma bind_symbol ( CURRENT_COLOR , c10 )
 
 // Inputs, attribute
-// Shader always assumed values where 0xFF based and not Float based, causing overflowing: #pragma bind_symbol ( aColor.xyzw , v1 )
 #pragma bind_symbol ( aPosition.xyz , v0 )
+#pragma bind_symbol ( aColor.xyzw , v1 )
 
 // Outputs, varing
 #pragma output_map ( position , o0 )
 #pragma output_map ( color , o1 )
 
-// Never used either, just wasted space: def c20, 0.003922, 0.003922, 0.003922, 0.003922
+// Constants
 def c19, 1.000000, -1.000000, 1.000000, 1.000000
+def c20, 0.003922, 0.003922, 0.003922, 0.003922
 def c21, 0.899994, 0.899994, 0.899994, 0.899994
 def c22, 0.972549, 0.972549, 0.972549, 1.000000
 def c23, 0.250000, 0.250000, 0.250000, 0.250000
